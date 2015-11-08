@@ -1,5 +1,5 @@
 {
-    "name": "wordpress-plugin-custom-installer",
+    "name": "taeram/wordpress-plugin-custom-installer",
     "description": "A composer plugin to install wordpress plugins in wp-content/plugins",
     "type": "composer-plugin",
     "license": "MIT",
