@@ -1,0 +1,15 @@
+{
+    "name": "wordpress-plugin-custom-installer",
+    "description": "A composer plugin to install wordpress plugins in wp-content/plugins",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {"Wordpress\\Composer": "src/"}
+    },
+    "extra": {
+        "class": "Wordpress\\Composer\\TemplateInstallerPlugin"
+    },
+    "require": {
+        "composer-plugin-api": "~1.0.0"
+    }
+}
