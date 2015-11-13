@@ -11,7 +11,7 @@ class TemplateInstaller extends LibraryInstaller
      * {@inheritDoc}
      */
     public function getPackageBasePath(PackageInterface $package) {
-        if (substr_count($package->getPrettyName(), 'wordpress-plugin') > 0) {
+        if (substr_count($package->getPrettyName(), 'wordpress-plugin') == 0) {
             throw new \InvalidArgumentException(
                 'Unable to install template, WordPress plugins '
                 .'should always start their package name with '
@@ -20,7 +20,7 @@ class TemplateInstaller extends LibraryInstaller
         }
 
         $packageDirName = preg_replace('/^(.*wordpress-plugin-)/', '', $package->getPrettyName());
-        return '../wp-content/plugins/' . $packageDirName;
+        return '../wp-content/plugins/composer-' . $packageDirName;
     }
 
     /**
